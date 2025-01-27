@@ -4,6 +4,8 @@ Visit [shadcnblocks.com](https://www.shadcnblocks.com/blocks?price=free) to view
 
 ![Free shadcn/ui blocks](free-shadcn-blocks-screenshot.png)
 
+## Blocks
+
 - [blog7](https://www.shadcnblocks.com/block/blog7)
 - [blog8](https://www.shadcnblocks.com/block/blog8)
 - [careers4](https://www.shadcnblocks.com/block/careers4)
