@@ -2,6 +2,8 @@
 
 Visit [shadcnblocks.com](https://www.shadcnblocks.com/blocks?price=free) to view demos of all free blocks.
 
+![Free shadcn/ui blocks](free-shadcn-blocks-screenshot.png)
+
 - [blog7](https://www.shadcnblocks.com/block/blog7)
 - [blog8](https://www.shadcnblocks.com/block/blog8)
 - [careers4](https://www.shadcnblocks.com/block/careers4)
@@ -35,5 +37,5 @@ Visit [shadcnblocks.com](https://www.shadcnblocks.com/blocks?price=free) to view
 - [signup2](https://www.shadcnblocks.com/block/signup2)
 - [stats8](https://www.shadcnblocks.com/block/stats8)
 - [team1](https://www.shadcnblocks.com/block/team1)
-- [testimonial10](https://www.shadcnblocks.com/block/- testimonial10)
+- [testimonial10](https://www.shadcnblocks.com/block/testimonial10)
 - [timeline3](https://www.shadcnblocks.com/block/timeline3)
