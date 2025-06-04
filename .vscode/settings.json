@@ -1,0 +1,25 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "**/public": true
+  },
+  "tailwindCSS.validate": false,
+  "tailwindCSS.lint.recommendedVariantOrder": "ignore",
+  "tailwindCSS.codeActions": false
+}

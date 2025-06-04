@@ -1,43 +1,6 @@
-# 35 Free blocks for shadcn/ui
+Free blocks for https://www.shadcnblocks.com
 
-Visit [shadcnblocks.com](https://www.shadcnblocks.com/blocks?price=free) to view demos of all free blocks.
-
-![Free shadcn/ui blocks](free-shadcn-blocks-screenshot.png)
-
-## Blocks
-
-- [blog7](https://www.shadcnblocks.com/block/blog7)
-- [blog8](https://www.shadcnblocks.com/block/blog8)
-- [careers4](https://www.shadcnblocks.com/block/careers4)
-- [contact7](https://www.shadcnblocks.com/block/contact7)
-- [cta10](https://www.shadcnblocks.com/block/cta10)
-- [cta11](https://www.shadcnblocks.com/block/cta11)
-- [faq1](https://www.shadcnblocks.com/block/faq1)
-- [feature13](https://www.shadcnblocks.com/block/feature13)
-- [feature17](https://www.shadcnblocks.com/block/feature17)
-- [feature43](https://www.shadcnblocks.com/block/feature43)
-- [feature72](https://www.shadcnblocks.com/block/feature72)
-- [feature73](https://www.shadcnblocks.com/block/feature73)
-- [feature108](https://www.shadcnblocks.com/block/feature108)
-- [feature166](https://www.shadcnblocks.com/block/feature166)
-- [footer2](https://www.shadcnblocks.com/block/footer2)
-- [gallery6](https://www.shadcnblocks.com/block/gallery6)
-- [hero1](https://www.shadcnblocks.com/block/hero1)
-- [hero3](https://www.shadcnblocks.com/block/hero3)
-- [hero7](https://www.shadcnblocks.com/block/hero7)
-- [hero32](https://www.shadcnblocks.com/block/hero32)
-- [hero45](https://www.shadcnblocks.com/block/hero45)
-- [hero47](https://www.shadcnblocks.com/block/hero47)
-- [hero115](https://www.shadcnblocks.com/block/hero115)
-- [hero151](https://www.shadcnblocks.com/block/hero151)
-- [list2](https://www.shadcnblocks.com/block/list2)
-- [login3](https://www.shadcnblocks.com/block/login3)
-- [logos3](https://www.shadcnblocks.com/block/logos3)
-- [logos8](https://www.shadcnblocks.com/block/logos8)
-- [navbar1](https://www.shadcnblocks.com/block/navbar1)
-- [pricing2](https://www.shadcnblocks.com/block/pricing2)
-- [signup2](https://www.shadcnblocks.com/block/signup2)
-- [stats8](https://www.shadcnblocks.com/block/stats8)
-- [team1](https://www.shadcnblocks.com/block/team1)
-- [testimonial10](https://www.shadcnblocks.com/block/testimonial10)
-- [timeline3](https://www.shadcnblocks.com/block/timeline3)
+```bash
+npm install
+npm run dev
+```

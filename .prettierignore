@@ -1,0 +1,10 @@
+node_modules
+pnpm-lock.yaml
+src/components/ui
+src/components/aceternity
+src/components/magicui
+package-lock.json
+README.md
+.next
+.env
+.env.local

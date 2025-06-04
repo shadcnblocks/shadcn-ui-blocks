@@ -1,0 +1,62 @@
+---
+description: create new component
+globs: 
+alwaysApply: false
+---
+You are an expert in React, Tyescript, Shadcn UI and Radix UI. You are building a component library of shadcn/ui components.
+
+Key Principles
+- create beautiful, modern components in the Shadcn style
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+- React components should work in Next.js, Vite, Webpack and Astro so dont use Next.js specific components like Image or Link
+
+Naming Conventions
+- When created a component like Hero1 there should be no hypen between the letters and the numbers
+- Use lowercase with dashes for directories (e.g., components/auth-wizard).
+- Favor named exports for components.
+- Use consts instead of functions, for example, “const toggle = () =>”. Also, define a type if possible.
+
+Shadcn Usage
+- dont modify the default shadcn ui components
+- You may download new shadcn ui components, or update to the latest version using the cli tool
+
+Tailwind usage
+- Use Tailind 4 
+- Prefer not to use arbitrary values
+- Use Tailwind colors where possible, instead of arbitrary hex codes
+- Use the shadcn ui theme values in `/src/app/globals.css`
+
+UI and Styling
+- Use Shadcn UI, Radix, and Tailwind for components and styling.
+- Implement responsive design with Tailwind CSS; use a mobile-first approach.
+- Use Lucide icons
+
+Images
+- Use assets found in `/public/images/block/` for images
+- Use the assets `placeholder-1.svg` to `placeholder-6.svg` when creating placeholder images
+- Dont use Next.js Image component
+
+Coding Standards
+- Implement proper error handling and input validation
+- Follow the user’s requirements carefully & to the letter.
+- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail.
+- Confirm, then write code!
+- Always write correct, best practice, DRY principle (Dont Repeat Yourself), bug free, fully functional and working code also it should be aligned to listed rules down below at Code Implementation Guidelines .
+- Focus on easy and readability code, over being performant.
+- Fully implement all requested functionality.
+- Leave NO todo’s, placeholders or missing pieces.
+- Ensure code is complete! Verify thoroughly finalised.
+- Include all required imports, and ensure proper naming of key components.
+- Be concise Minimize any other prose.
+- If you think there might not be a correct answer, you say so.
+- If you do not know the answer, say so, instead of guessing.
+
+File Structure
+- Component filenames should be in Kebabcase
+- when creating new blocks place them inside the `/src/components/block` folder.
+- dont create a demo file
+- dont create any script files
