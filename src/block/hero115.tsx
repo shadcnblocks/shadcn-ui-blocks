@@ -38,7 +38,7 @@ const Hero115 = ({
               style={{
                 transform: "translate(-50%, -50%)",
               }}
-              className="absolute top-1/2 left-1/2 -z-10 mx-auto size-[800px] rounded-full border p-16 [mask-image:linear-gradient(to_top,transparent,transparent,white,white,white,transparent,transparent)] md:size-[1300px] md:p-32"
+              className="absolute top-1/2 left-1/2 -z-10 mx-auto size-[800px] rounded-full border [mask-image:linear-gradient(to_top,transparent,transparent,white,white,white,transparent,transparent)] p-16 md:size-[1300px] md:p-32"
             >
               <div className="size-full rounded-full border p-16 md:p-32">
                 <div className="size-full rounded-full border"></div>

@@ -3,10 +3,13 @@ import path from "path";
 import React from "react";
 
 import { ComponentRenderer } from "@/components/ComponentRenderer";
+import { Hero } from "@/components/Hero";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 import blocksList from "@/blocks.generated.json";
 
-// type assertion for the generated array
+import MinimapSidebar from "../components/MinimapSidebar";
+
 const blocks = blocksList as string[];
 
 type Block = {
@@ -17,7 +20,6 @@ type Block = {
 };
 
 export default async function Page() {
-  // Dynamically import all block components and their code
   const blocksWithCode: Block[] = await Promise.all(
     blocks.map(async (blockName) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -46,19 +48,22 @@ export default async function Page() {
   );
 
   return (
-    <div>
-      <div className="container">
-        <div className="flex flex-col items-center justify-center py-12">
-          <h1 className="text-center text-8xl font-bold">Free Blocks</h1>
-          <h2 className="text-center text-8xl font-bold">
-            Free Shadcn/ui blocks
-            {blocksWithCode.length}
-          </h2>
+    <SidebarProvider>
+      <div className="flex">
+        {/* Main content with blocks */}
+        <div className="flex-1">
+          <Hero />
+          {blocksWithCode.map((block) => (
+            <div id={`block-${block.name}`} key={block.name}>
+              <ComponentRenderer {...block} />
+            </div>
+          ))}
         </div>
+        {/* Minimap sidebar */}
+        <MinimapSidebar
+          blocks={blocksWithCode.map((b) => ({ name: b.name }))}
+        />
       </div>
-      {blocksWithCode.map((block) => (
-        <ComponentRenderer key={block.name} {...block} />
-      ))}
-    </div>
+    </SidebarProvider>
   );
 }
