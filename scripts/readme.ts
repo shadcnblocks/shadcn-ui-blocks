@@ -31,14 +31,45 @@ async function getScreenshotFilename(id: string): Promise<string | null> {
 }
 
 async function generateTable(blockIds: string[]) {
-  const rows = await Promise.all(
+  // First, gather all content for each column
+  const screenshotContents = await Promise.all(
     blockIds.map(async (id) => {
       const screenshot = await getScreenshotFilename(id);
-      const imgTag = screenshot ? `![${id}](${screenshot})` : "";
-      return `| ${imgTag} | \`${id}\` |`;
+      return screenshot ? `![${id}](${screenshot})` : "";
     }),
   );
-  return ["| Screenshot | Block ID |", "|---|---|", ...rows].join("\n");
+  const blockIdContents = blockIds.map((id) => `\`${id}\``);
+  // Include header in width calculation
+  const screenshotHeaderText = "Screenshot";
+  const blockIdHeaderText = "Block ID";
+  const screenshotColWidth = Math.max(
+    screenshotHeaderText.length,
+    ...screenshotContents.map((c) => c.length),
+  );
+  const blockIdColWidth = Math.max(
+    blockIdHeaderText.length,
+    ...blockIdContents.map((c) => c.length),
+  );
+  // Pad headers
+  const screenshotHeader = screenshotHeaderText.padEnd(screenshotColWidth, " ");
+  const blockIdHeader = blockIdHeaderText.padEnd(blockIdColWidth, " ");
+  // Separator lines
+  const screenshotSep = "".padEnd(screenshotColWidth, "-");
+  const blockIdSep = "".padEnd(blockIdColWidth, "-");
+  // Build rows
+  const rows = await Promise.all(
+    blockIds.map(async (id, i) => {
+      const imgTag = screenshotContents[i];
+      const paddedImgTag = imgTag.padEnd(screenshotColWidth, " ");
+      const paddedId = blockIdContents[i].padEnd(blockIdColWidth, " ");
+      return `| ${paddedImgTag} | ${paddedId} |`;
+    }),
+  );
+  return [
+    `| ${screenshotHeader} | ${blockIdHeader} |`,
+    `| ${screenshotSep} | ${blockIdSep} |`,
+    ...rows,
+  ].join("\n");
 }
 
 async function updateReadme(table: string) {
@@ -47,7 +78,7 @@ async function updateReadme(table: string) {
   const blocksSectionRegex = /## Blocks[\s\S]*?(?=^## |Z)/gm;
   readme = readme.replace(blocksSectionRegex, "");
   // Add static markdown at the top
-  const staticTop = `# Free Blocks for shadcn/ui\n\n## A simple collection of 44 free marketing blocks for shadcn/ui, Tailwind and React.\n`;
+  const staticTop = `# Free Blocks for shadcn/ui\n\nA simple collection of 44 free marketing blocks for shadcn/ui, Tailwind and React.`;
   // Add static markdown at the bottom
   const staticBottom = `\n\nFind hundreds more blocks at https://shadcnblocks.com\n`;
   // Insert the new blocks section after the static markdown

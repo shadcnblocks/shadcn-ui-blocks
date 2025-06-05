@@ -54,14 +54,16 @@ export default async function Page() {
       <div className="flex-1 overflow-x-hidden">
         <Hero />
         {blocksWithCode.map((block) => (
-          <div id={`block-${block.name}`} key={block.name}>
+          <div id={`${block.name.toLowerCase()}`} key={block.name}>
             <ComponentRenderer {...block} />
           </div>
         ))}
         <Cta />
       </div>
       {/* Minimap sidebar */}
-      <MinimapSidebar blocks={blocksWithCode.map((b) => ({ name: b.name }))} />
+      <MinimapSidebar
+        blocks={blocksWithCode.map((b) => ({ name: b.name.toLowerCase() }))}
+      />
     </SidebarProvider>
   );
 }

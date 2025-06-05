@@ -54,7 +54,7 @@ export default function MinimapSidebar({
                 {blocks.map((block) => (
                   <SidebarMenuItem key={block.name}>
                     <a
-                      href={`#block-${block.name}`}
+                      href={`#${block.name}`}
                       className={
                         "block truncate rounded px-2 py-1 text-xs transition-all " +
                         (active === block.name
