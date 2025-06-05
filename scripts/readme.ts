@@ -35,14 +35,10 @@ async function generateTable(blockIds: string[]) {
     blockIds.map(async (id) => {
       const screenshot = await getScreenshotFilename(id);
       const imgTag = screenshot ? `![${id}](${screenshot})` : "";
-      return `| ${imgTag} | \`${id}\` | ${id} |`;
+      return `| ${imgTag} | \`${id}\` |`;
     }),
   );
-  return [
-    "| Screenshot | Block ID | Description |",
-    "|---|---|---|",
-    ...rows,
-  ].join("\n");
+  return ["| Screenshot | Block ID |", "|---|---|", ...rows].join("\n");
 }
 
 async function updateReadme(table: string) {
@@ -51,11 +47,17 @@ async function updateReadme(table: string) {
   const blocksSectionRegex = /## Blocks[\s\S]*?(?=^## |Z)/gm;
   readme = readme.replace(blocksSectionRegex, "");
   // Add static markdown at the top
-  const staticTop = `# Free Blocks for shadcn/ui\n\n## 44 free marketing blocks \n\nCreated by https://shadcnblocks.com\n`;
+  const staticTop = `# Free Blocks for shadcn/ui\n\n## A simple collection of 44 free marketing blocks for shadcn/ui, Tailwind and React.\n`;
+  // Add static markdown at the bottom
+  const staticBottom = `\n\nFind hundreds more blocks at https://shadcnblocks.com\n`;
   // Insert the new blocks section after the static markdown
-  const newReadme = [staticTop, "\n## Blocks\n", table].join("\n");
+  const newReadme = [staticTop, "\n## Blocks\n", table, staticBottom].join(
+    "\n",
+  );
   await fs.writeFile(readmePath, newReadme);
-  console.log("README.md updated with blocks table and static header.");
+  console.log(
+    "README.md updated with blocks table, static header, and static footer.",
+  );
 }
 
 async function main() {
