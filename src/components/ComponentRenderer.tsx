@@ -25,7 +25,7 @@ export function ComponentRenderer({
   );
 
   return (
-    <div className="w-full max-w-full overflow-x-hidden border-b pt-16">
+    <div className="border-b pt-16">
       <Tabs defaultValue="preview" className="w-full">
         <div className="container">
           <h2 className="mb-4 text-lg font-normal">{name}</h2>
@@ -34,10 +34,7 @@ export function ComponentRenderer({
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
         </div>
-        <TabsContent
-          value="preview"
-          className="w-full max-w-full overflow-x-hidden pt-4"
-        >
+        <TabsContent value="preview" className="pt-4">
           <Component />
         </TabsContent>
         <TabsContent value="code" className="pt-4">

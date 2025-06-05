@@ -1,4 +1,3 @@
-import { ArrowDown } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -15,7 +14,7 @@ const Hero = () => {
         />
         <div className="grid grid-cols-1 items-center justify-center gap-16 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            <h1 className="text-5xl leading-[1.1] font-normal xl:text-6xl">
+            <h1 className="text-4xl leading-[1.1] font-normal md:text-5xl xl:text-6xl">
               A collection of free opensource blocks for shadcn/ui
             </h1>
             <div className="flex gap-2">
@@ -24,14 +23,9 @@ const Hero = () => {
                   <FaGithub /> Star on Github
                 </a>
               </Button>
-              <Button asChild variant="secondary" className="w-fit">
-                <a href="#">
-                  Browse <ArrowDown />
-                </a>
-              </Button>
             </div>
           </div>
-          <div className="justify-self-center lg:justify-self-end">
+          <div className="hidden justify-self-center lg:block lg:justify-self-end">
             <div className="flex aspect-[0.955145119/1] flex-col rounded-xl border bg-white p-3 shadow-xl sm:w-[22.625rem]">
               <AspectRatio
                 ratio={1.110367893 / 1}
@@ -44,13 +38,29 @@ const Hero = () => {
                 />
               </AspectRatio>
               <div className="m-auto flex w-full items-center justify-between">
-                <div className="flex items-center gap-1 rounded-md bg-white px-2 py-1">
-                  <span>Github</span>
-                  <FaGithub />
-
-                  <p className="text-xs font-semibold text-black/40 sm:text-sm">
-                    14 Stars
-                  </p>
+                <div className="flex items-center gap-2 rounded-md px-2 py-1">
+                  <img
+                    src="/images/shadcn-ui-icon.svg"
+                    alt="shadcn UI"
+                    className="h-4 w-4"
+                  />
+                  <p className="text-xs font-semibold sm:text-sm">shadcn/ui</p>
+                </div>
+                <div className="flex items-center gap-2 rounded-md px-2 py-1">
+                  <img
+                    src="/images/tailwind-icon.svg"
+                    alt="Tailwind CSS"
+                    className="size-5"
+                  />
+                  <p className="text-xs font-semibold sm:text-sm">Tailwind</p>
+                </div>
+                <div className="flex items-center gap-2 rounded-md px-2 py-1">
+                  <img
+                    src="/images/react-icon.svg"
+                    alt="React"
+                    className="h-4 w-4"
+                  />
+                  <p className="text-xs font-semibold sm:text-sm">React</p>
                 </div>
               </div>
             </div>

@@ -49,21 +49,17 @@ export default async function Page() {
 
   return (
     <SidebarProvider>
-      <div className="flex">
-        {/* Main content with blocks */}
-        <div className="flex-1">
-          <Hero />
-          {blocksWithCode.map((block) => (
-            <div id={`block-${block.name}`} key={block.name}>
-              <ComponentRenderer {...block} />
-            </div>
-          ))}
-        </div>
-        {/* Minimap sidebar */}
-        <MinimapSidebar
-          blocks={blocksWithCode.map((b) => ({ name: b.name }))}
-        />
+      {/* Main content with blocks */}
+      <div className="flex-1 overflow-x-hidden">
+        <Hero />
+        {blocksWithCode.map((block) => (
+          <div id={`block-${block.name}`} key={block.name}>
+            <ComponentRenderer {...block} />
+          </div>
+        ))}
       </div>
+      {/* Minimap sidebar */}
+      <MinimapSidebar blocks={blocksWithCode.map((b) => ({ name: b.name }))} />
     </SidebarProvider>
   );
 }
