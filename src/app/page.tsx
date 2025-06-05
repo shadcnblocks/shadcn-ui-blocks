@@ -3,6 +3,7 @@ import path from "path";
 import React from "react";
 
 import { ComponentRenderer } from "@/components/ComponentRenderer";
+import { Cta } from "@/components/Cta";
 import { Hero } from "@/components/Hero";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
@@ -57,6 +58,7 @@ export default async function Page() {
             <ComponentRenderer {...block} />
           </div>
         ))}
+        <Cta />
       </div>
       {/* Minimap sidebar */}
       <MinimapSidebar blocks={blocksWithCode.map((b) => ({ name: b.name }))} />

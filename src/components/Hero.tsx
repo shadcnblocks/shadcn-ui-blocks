@@ -14,12 +14,12 @@ const Hero = () => {
         />
         <div className="grid grid-cols-1 items-center justify-center gap-16 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            <h1 className="text-4xl leading-[1.1] font-normal md:text-5xl xl:text-6xl">
+            <h1 className="text-3xl leading-[1.1] font-normal md:text-5xl xl:text-6xl">
               A collection of free opensource blocks for shadcn/ui
             </h1>
             <div className="flex gap-2">
               <Button asChild variant="default" className="w-fit">
-                <a href="#">
+                <a href="https://github.com/shadcnblocks/shadcn-ui-blocks">
                   <FaGithub /> Star on Github
                 </a>
               </Button>
