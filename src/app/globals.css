@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
 @import "tailwindcss";
 
@@ -73,13 +67,6 @@
   --font-sans: "Inter", sans-serif;
   --font-serif: "Roboto Serif", serif;
   --font-mono: "Roboto Mono", monospace;
-  --font-cursive: "Caveat", cursive;
-  --font-playfair: "Playfair Display", serif;
-  --font-caveat: "Caveat", cursive;
-  --font-calSans: "Cal Sans", sans-serif;
-  --font-bebasNeue: "Bebas Neue", sans-serif;
-  --font-anton: "Anton", sans-serif;
-  --font-instrumentSerif: "Instrument Serif", serif;
 }
 .dark {
   --background: oklch(0.141 0.005 285.823);
@@ -200,14 +187,6 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
-  --font-cursive: var(--font-cursive);
-
-  --font-playfair: var(--font-playfair);
-  --font-caveat: var(--font-caveat);
-  --font-calSans: var(--font-calSans);
-  --font-bebasNeue: var(--font-bebasNeue);
-  --font-instrumentSerif: var(--font-instrumentSerif);
-  --font-anton: var(--font-anton);
 
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);
@@ -676,15 +655,6 @@
   }
   body {
     @apply bg-background font-sans text-foreground antialiased;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 

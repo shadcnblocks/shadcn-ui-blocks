@@ -20,7 +20,7 @@ const Hero = () => {
             <div className="flex gap-2">
               <Button asChild variant="default" className="w-fit">
                 <a href="https://github.com/shadcnblocks/shadcn-ui-blocks">
-                  <FaGithub /> Star on Github
+                  <FaGithub /> Github
                 </a>
               </Button>
             </div>

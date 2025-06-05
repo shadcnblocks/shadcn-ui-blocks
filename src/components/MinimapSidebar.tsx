@@ -23,7 +23,7 @@ export default function MinimapSidebar({
     const handleScroll = () => {
       let current: string | null = null;
       for (const block of blocks) {
-        const el = document.getElementById(`block-${block.name}`);
+        const el = document.getElementById(`${block.name}`);
         if (el) {
           const rect = el.getBoundingClientRect();
           if (rect.top <= 120) {
